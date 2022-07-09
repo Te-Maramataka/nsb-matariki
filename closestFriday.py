@@ -4,7 +4,7 @@ from datetime import timedelta
 
 
 def getClosestFriday(d0):
-    # If it's a saturday, the previous Friday is chosen instead of the next
+    # If it's a Saturday, the previous Friday is chosen instead of the next
     if (d0.weekday() < 4):
         return d0+timedelta(4-d0.weekday())
     else:

@@ -11,3 +11,4 @@ def getLunation(year):
     mod = (year-2023) % 3  # remainder lunar months
     cycles = floor((year-2023)/3)  # a complete cycle = 12+12+13
     return mod*12 + cycles*37 + CONST_LUNATION_2023
+print(getLunation(2201))

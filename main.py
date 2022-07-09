@@ -2,8 +2,8 @@ from getMatariki import getMatariki
 
 
 def main():
-    year = 2022
-    getMatariki(year)
+    year = int(input("Year: "))
+    print(getMatariki(year))
 
 
 if __name__ == "__main__":

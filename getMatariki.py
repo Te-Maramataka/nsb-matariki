@@ -21,9 +21,9 @@ def getMatariki(year):
         lunation += 1
         d = (lunation - 1)*dt + BASE_LUNATION_BLN + 0.75*dt
 
-    return closestFriday.getClosestFriday(d)
+    return closestFriday.getClosestFriday(d).strftime('%Y-%m-%d')
 
 # TODO: Doesn't work for >2200 Investigate. yearToLunation() is not working.
 
 
-print(getMatariki(2200))
+# print(getMatariki(2200))

@@ -1,14 +1,10 @@
-# from lunation import getMatariki
-import datetime
+from getMatariki import getMatariki
 
-from test import get
 
-# y = 2023
+def main():
+    year = 2022
+    getMatariki(year)
 
-# while (y < 2053):
-#     print(getMatariki(y))
-#     y += 1
 
-# print(getMatariki(2540))
-
-year = 2023
+if __name__ == "__main__":
+    main()

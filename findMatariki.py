@@ -8,8 +8,8 @@ from scipy.signal import argrelextrema
 class Matariki(object):
 
     @staticmethod
-    def getSTOS(year):
-        url = fr"https://ssd.jpl.nasa.gov/api/horizons.api?OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&format=json&COMMAND='301'&QUANTITIES='24'&CENTER='500@399'&START_TIME='{year}-05-26'&STOP_TIME='{year}-07-30'&TIME_ZONE='+12:00'&STEP_SIZE='1h'"
+    def getSTOS(year, center=500, timezone='+12:00', step_size='1h'):
+        url = fr"https://ssd.jpl.nasa.gov/api/horizons.api?OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&format=json&COMMAND='301'&QUANTITIES='24'&CENTER='{center}@399'&START_TIME='{year}-05-26'&STOP_TIME='{year}-07-30'&TIME_ZONE='{timezone}'&STEP_SIZE='{step_size}'"
         response = urllib.request.urlopen(url)
         result = json.loads(response.read())
         data = result['result'].partition('$$SOE')[2].partition('$$EOE')[0]
@@ -38,7 +38,7 @@ class Matariki(object):
 
     @staticmethod
     def getMatariki(year):
-        nineteen_june = datetime(year, 6, 18)
+        nineteen_june = datetime(int(year), 6, 18)
 
         stos = Matariki.getSTOS(year)
         new_moons = Matariki.getNewMoons(stos)
@@ -52,4 +52,21 @@ class Matariki(object):
         return Matariki.getClosestFriday(tangaroa).strftime('%Y-%m-%d')
 
 
-print(Matariki.getMatariki(2022))
+def main():
+    validYear = False
+    while not validYear:
+        try:
+            year = int(input("Year: "))
+            if year < 1000 or year > 9999:
+                print(
+                    'This calculator only works for years between 1000 and 9999 inclusive.')
+            else:
+                validYear = True
+        except:
+            print('Year has to be a valid integer.')
+
+    print(Matariki.getMatariki(year))
+
+
+if __name__ == "__main__":
+    main()

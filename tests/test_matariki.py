@@ -16,7 +16,7 @@ class TestMatarikiDate(unittest.TestCase):
     def test_year_2025(self):
         self.assertEqual('2025-06-20', Matariki.getMatariki(2025))
 
-    def test_year_2026(self):
+    def test_year_2026(self): 
         self.assertEqual('2026-07-10', Matariki.getMatariki(2026))
 
     def test_year_2027(self):

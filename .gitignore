@@ -1,0 +1,7 @@
+# IDE
+.ipynb_checkpoints/
+.vs/
+
+# Byte-compiled / optimised / DLL files
+__pycache__/
+tempCodeRunnerFile.py

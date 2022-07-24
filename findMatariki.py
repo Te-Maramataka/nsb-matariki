@@ -41,4 +41,4 @@ def getMatarikiFromAPI(year):
     return getClosestFriday(tangaroa).strftime('%Y-%m-%d')
 
 
-print(getMatarikiFromAPI(2025))
+print(getMatarikiFromAPI(2021))

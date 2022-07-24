@@ -7,7 +7,7 @@ from datetime import timedelta
 def getMatarikiFromAPI(year):
 
     # API Platfprm used - https://web.postman.co/
-    url = fr"https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND='301'&OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='{year}-06-19'&STOP_TIME='{year}-07-15'&STEP_SIZE='60min'&QUANTITIES='24"
+    url = fr"https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND='301'&OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='{year}-06-18'&STOP_TIME='{year}-07-15'&STEP_SIZE='60min'&QUANTITIES='24"
 
     response = urllib.request.urlopen(url)
     result = json.loads(response.read())

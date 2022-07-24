@@ -7,8 +7,16 @@ from scipy.signal import argrelextrema
 
 class Matariki(object):
 
-    # This function takes the year and calls Nasa's API, returning STO values in a numpy array
-    # Default settings: location = Auckland Observatory, timezone = GMT+12, frequency = 1 hour
+    '''
+    Takes the year and calls Nasa's API, returning STO values in a numpy array.
+    year: input year
+    Optional arguments:
+        center: location code from Horizons API
+        timezone: UTC time zone
+        step_size: frequency at which stos are returned
+
+    return: numpy array containing stos values with their date
+    '''
     @staticmethod
     def getSTOS(year, center=500, timezone='+12:00', step_size='1h'):
         url = fr"https://ssd.jpl.nasa.gov/api/horizons.api?OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&format=json&COMMAND='301'&QUANTITIES='24'&CENTER='{center}@399'&START_TIME='{year}-05-26'&STOP_TIME='{year}-07-30'&TIME_ZONE='{timezone}'&STEP_SIZE='{step_size}'"
@@ -21,14 +29,23 @@ class Matariki(object):
         stos = [times[i].split() for i in range(len(times))]
         return numpy.array(stos)
 
-    # This function finds and returns indexes of local maximas after taking STO values in a numpy array
+    '''
+    Finds and returns indexes of local maximas after taking STO values in a numpy array.
+    stos: Numpy array containing STO values
+    return: Numpy array containing indices for local maximas in stos
+    '''
     @staticmethod
     def getNewMoons(stos):
         stos_cleaned = stos[:, 2].astype(float)
         return argrelextrema(stos_cleaned, numpy.greater)[0]
 
-    # This function inputs the first day of the Tangaroa period, day 0, and returns the closest Friday,
-    # assuming the Tangaroa period is four days long
+    '''
+    Using the first day of the Tangaroa period, finds the closest Friday,
+    assuming the Tangaroa period is four days long.
+
+    d0: First day of the Tangaroa period
+    return: closest Friday as a datetime object
+    '''
     @staticmethod
     def getClosestFriday(d0):
         if (d0.weekday() < 4):
@@ -43,7 +60,12 @@ class Matariki(object):
 
         return friday
 
-    # This function takes input year (integer) and returns the Matariki date
+    '''
+    Calculates the Matariki date for a year.
+
+    year: input year
+    output: matariki date in YY-MM-DD string format
+    '''
     @staticmethod
     def getMatariki(year):
         eighteen_june = datetime(int(year), 6, 18)
@@ -75,6 +97,7 @@ def main():
             print('Year has to be a valid integer.')
 
     print(Matariki.getMatariki(year))
+
 
 
 if __name__ == "__main__":

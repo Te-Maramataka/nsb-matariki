@@ -3,7 +3,10 @@
 
 Matariki is the Māori name of the Pleides star cluster. The predawn rising of Matariki in the mid-winter sky indicates the changing of the seasons and the beginning of the Māori New Year. Traditionally, this was used to deduce the coming season's crop; a warmer season, and therefore a more productive crop yield, was indicated by how bright the stars were. 
 
-![image](https://user-images.githubusercontent.com/67076071/181239364-db4690c8-5d69-4059-92c1-19e911d018df.png)
+<p align="center">
+  <img width="436" height="436" src="https://user-images.githubusercontent.com/67076071/181239364-db4690c8-5d69-4059-92c1-19e911d018df.png">
+</p>
+
 
 Today, Matariki serves as a celebration of whanaungatanga (kinship), a time for whanau (families) to "reflect on the past year, celebrate the present, and plan for the year ahead". With the passing of [The Matariki Public Holiday Bill](https://www.parliament.nz/en/pb/bills-and-laws/bills-proposed-laws/document/BILL_115986/te-pire-m%C5%8D-te-hararei-t%C5%ABmatanui-o-te-k%C4%81hui-o-matarikite), Aotearoa celebrated its first official public holiday this year on Friday, the 24th of June. 
 

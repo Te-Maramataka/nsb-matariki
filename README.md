@@ -12,7 +12,20 @@ We believe this script also has real-world practical use for whanau on a nationa
 
 ## **Installation**
 
+To install the required libraries, go to the root path of the repo and run the following:
+```
+pip install -r requirements.txt
+```
+
 ## **Usage**
+```
+In the root directory, run:
+```
+python findMatariki.py
+```
+
+Then enter the year and the Matariki date for that year will be returned.
+
 
 ## **Methodology**
  ### On the surface

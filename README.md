@@ -23,15 +23,11 @@ In the root directory, run:
 ```
 python findMatariki.py
 ```
-
-Then enter the year and the Matariki date for that year will be returned.
+The program will prompt you to enter a year as an input. Enter the year and the Matariki date for that year will be returned, in a YYYY-MM-DD format.
 
 
 ## **Methodology**
- ### On the surface
- The program will prompt you to enter a **REASONABLE** year as the input. Press enter after writing down the year you would like to predict. Then, the program will return the date of Matariki in YYYY-MM-DD format for that year. 
- The year chosen has to be a number, and it must be a number between 1000 to 9999 inclusive (the justification behind this is in Merits).
- ### Digging deeper
+
 
 ## **Merits**
   - Specifications

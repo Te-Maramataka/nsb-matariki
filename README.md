@@ -11,7 +11,7 @@ We believe this script also has real-world practical use for whanau on a nationa
 
 ## **Installation**
 
-To install the required libraries, go to the root path of the repo and run the following:
+To install the required libraries, go to the repository folder. Then run the following in your command prompt:
 ```
 pip install -r requirements.txt
 ```

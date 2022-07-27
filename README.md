@@ -1,11 +1,11 @@
 # **findMatariki by Team NSB**
 ### **Preface**
 
-Matariki is the Māori name of the Pleides star cluster. The predawn rising of Matariki in the mid-winter sky marks the changing of the seasons and the beginning of the Maori New Year. Traditionally, this was used to determine the coming season's crop; a warmer season, and therefore a more productive crop yield, was indicated by how bright the stars were. 
+Matariki is the Māori name of the Pleides star cluster. The predawn rising of Matariki in the mid-winter sky marks the changing of the seasons and the beginning of the Māori New Year. Traditionally, this was used to deduce the coming season's harvest; a warmer season, and therefore a more productive crop yield, was indicated by how bright the stars were. 
 
 Today, Matariki serves as a celebration of whanaungatanga (kinship), a time for whanau (families) to "reflect on the past year, celebrate the present, and plan for the year ahead". With the passing of [The Matariki Public Holiday Bill](https://www.parliament.nz/en/pb/bills-and-laws/bills-proposed-laws/document/BILL_115986/te-pire-m%C5%8D-te-hararei-t%C5%ABmatanui-o-te-k%C4%81hui-o-matarikite), Aotearoa celebrated its first official public holiday this year on Friday, the 24th of June. 
 
-As part of our school Hackathon, we have programmed a user-friendly python script using [NASA's JPL Horizons API](https://ssd-api.jpl.nasa.gov/doc/horizons.html) that outputs the date of the public holiday with any reasonable year as an input. 
+As part of our school Hackathon, we have programmed this user-friendly python script using [NASA's JPL Horizons API](https://ssd-api.jpl.nasa.gov/doc/horizons.html) to predict the date of the public holiday with any reasonable year as an input. 
 
 We believe this script also has real-world practical use for whanau on a national level. Therefore, we have concocted a [concept design](https://docs.google.com/presentation/d/19V19oQvpHnYjP2_FcM1_xw8tZIVGi9tB801cl1HUxh0/edit#slide=id.p) for a Chrome extension as a possible future implementation. Rangatahi (younger generation) could use this extension to find out when the Matariki public holiday will be on a recent year; they could then get into contact with their tūpuna (grandparents) to get together. Not only would this celebrate the purpose of Matariki, this could also form the basis of a culture change by bridging the growing gap between tuakana-teina (relationship between youth and elderly), by enabling our youth to take the first step for connection.
 

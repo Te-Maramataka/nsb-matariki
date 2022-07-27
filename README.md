@@ -1,13 +1,17 @@
-# **TEAM NSB**
+# **findMatariki | Team NSB**
 
 ### **Preface**
-Matariki is the Māori name of the Pleides star cluster. The predawn rising of Matariki in the mid-winter sky marks the changing of the seasons and the beginning of the Maori New Year. Traditionally, this was used to determine the coming season's crop; a warmer season, and therefore a more productive crop yield, was indicated by how bright the stars were. Today, Matariki serves as a celebration of whanaungatanga (kinship), a time for whanau (family) to "reflect on the past year, celebrate the present, and plan for the year ahead". With the passing of [The Matariki Public Holiday Bill](https://www.parliament.nz/en/pb/bills-and-laws/bills-proposed-laws/document/BILL_115986/te-pire-m%C5%8D-te-hararei-t%C5%ABmatanui-o-te-k%C4%81hui-o-matarikite), Aotearoa celebrated its first official public holiday this year on Friday, the 24th of June. Using NASA's JPL Horizons API, we have programmed a user-friendly python script that outputs the date of the public holiday with any reasonable year as input. As well as being a submission for our school Hackathon, we believe this script would have practical use for any families 
+Matariki is the Māori name of the Pleides star cluster. The predawn rising of Matariki in the mid-winter sky marks the changing of the seasons and the beginning of the Maori New Year. Traditionally, this was used to determine the coming season's crop; a warmer season, and therefore a more productive crop yield, was indicated by how bright the stars were. Today, Matariki serves as a celebration of whanaungatanga (kinship), a time for whanau (families) to "reflect on the past year, celebrate the present, and plan for the year ahead". With the passing of [The Matariki Public Holiday Bill](https://www.parliament.nz/en/pb/bills-and-laws/bills-proposed-laws/document/BILL_115986/te-pire-m%C5%8D-te-hararei-t%C5%ABmatanui-o-te-k%C4%81hui-o-matarikite), Aotearoa celebrated its first official public holiday this year on Friday, the 24th of June. Using NASA's JPL Horizons API, we have programmed a user-friendly python script that outputs the date of the public holiday with any reasonable year as an input. 
+
+As well as being a submission for our school Hackathon, we believe this script has real-world practical use for whanau on a national level. Therefore, we have concocted a concept design for what could be a future implementation of this script: a Chrome extension (due to ease of access). For example, rangatahi (the younger generation), who are a more tech-savvy demographic, can use this script/extension to find out when the Matariki public holiday will be on a recent year. Knowing this, they could then get into contact with their tūpuna (grandparents) so that they could all get together on mentioned date. Not only would this celebrate the purpose of Matariki, this would form the basis of a culture change to bridge the growing gap between tuakana-teina (relationship between youth and elderly), by enabling our youth to make the first intiative.
 
 ## **Installation**
 
 ## **Usage**
 
-## **Our Strategy**
+## **Methodology**
+ - On the surface: enter a 
+ - Digging deeper: 
 
 ## **Documentation**
 other solutions are not as accurate
@@ -21,7 +25,7 @@ Furthermore, under our Alternative Solutions, we added detailed string comments 
   - Reusability
   Every function defined is structured on its own, so that they can be reusable in other programs. We ensured this was the case when we were starting as we knew a possible development on this script could be to use it as a Chrome extension.
   - Documentation
-  Refer to "Our Strategy" and "Alternative Solutions".
+  Refer to "Methodology" and "Alternative Solutions".
   - Efficiency
   
   - Teamwork

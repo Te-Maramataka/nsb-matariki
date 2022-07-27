@@ -31,7 +31,10 @@ The program will prompt you to enter a year as an input. Enter the year and the 
 ## **Methodology**
 Since the Matariki dates were [determined](https://www.mbie.govt.nz/assets/matariki-dates-2022-to-2052-matariki-advisory-group.pdf) by using the knowledge that the Matariki becomes visible during the Tangaroa period of a Maori lunar month, we used lunar cycles to find this Tangaroa period.
 
-Using NASA's Horizon API to get the Sun-to-Phase (STO) phase angles of the moon, we determine the local maximas of these STO values to get times for the new moons of different months. Then by using the fact that Tangaroa always occurs after the 19th of June and that the Tangaroa period always starts on the 23rd day of a lunar month, we find the first day of the Tangaroa period after the 19th of June and by using ```Matariki.closestFriday()```, we determine closest Friday to the start of the Tangaroa period which is also the Matariki day for that year.
+- Use NASA's Horizon API to get the Sun-to-Phase (STO) phase angles of the moon.
+- Determine the local maximas of these STO values using ```argrelextrema``` from the```SciPy.Signal``` library. These gives us the times for the new moons of different months. 
+- Use the fact that Tangaroa always occurs after the 19th of June and that the Tangaroa period always starts on the 23rd day of a lunar month to find the first day of the Tangaroa period after the 19th of June.
+- Use ```Matariki.closestFriday()``` to determine closest Friday to the start of the Tangaroa period which is also the Matariki day for that year.
 
 ## **Specifications**
 Our script finds the correct Matariki date for the next 50 years (2022-2052), as outlined in [this document](https://www.mbie.govt.nz/assets/matariki-dates-2022-to-2052-matariki-advisory-group.pdf). Not only this, we are also able to predict the Matariki date for a long range of years, both in the future and in the past. Since NASA's JPL Horizons API has moon phase data available from years 1000 to 9999 inclusive, this means our script can predict when Matariki was as far as 1022 years ago, as well as when it will be 7977 years in the future, and anywhere in between. We have displayed the predictions in a YYYY-MM-DD format for convenience.

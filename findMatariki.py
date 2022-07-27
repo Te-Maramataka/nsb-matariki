@@ -1,28 +1,33 @@
+# Collaborator: Sadat Taseen, Shafquat Tabeeb. 2022.
+
+
 import numpy
 import json
 import urllib.request
 from datetime import datetime, timedelta
 from scipy.signal import argrelextrema
 
+# Horizons API WebApp: https://ssd.jpl.nasa.gov/horizons/app.html#/
+# Horizons API Documentation: https://ssd-api.jpl.nasa.gov/doc/horizons.html
+
 
 class Matariki(object):
-
     '''
     Takes the year and calls Nasa's API, returning STO values in a numpy array.
     year: input year
     Optional arguments:
-        center: location code from Horizons API
+        center: location code from Horizons API; by default, 500 is Auckland
         timezone: UTC time zone
         step_size: frequency at which stos are returned
 
     return: numpy array containing stos values with their date
     '''
     @staticmethod
-    def getSTOS(year, center=500, timezone='+12:00', step_size='1h'):
+    def getSTOS(year, center='500', timezone='+12:00', step_size='1h'):
         url = fr"https://ssd.jpl.nasa.gov/api/horizons.api?OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&format=json&COMMAND='301'&QUANTITIES='24'&CENTER='{center}@399'&START_TIME='{year}-05-26'&STOP_TIME='{year}-07-30'&TIME_ZONE='{timezone}'&STEP_SIZE='{step_size}'"
         response = urllib.request.urlopen(url)
         result = json.loads(response.read())
-        
+
         # Extract ephemeris from the results column
         data = result['result'].partition('$$SOE')[2].partition('$$EOE')[0]
         times = data.split('\n')[1:-1]
@@ -64,13 +69,19 @@ class Matariki(object):
     Calculates the Matariki date for a year.
 
     year: input year
+    Optional arguments:
+        center: location code from Horizons API; by default, 500 is Auckland
+        timezone: UTC time 
+        step_size: frequency at which stos are returned
+        
     output: matariki date in YY-MM-DD string format
     '''
     @staticmethod
-    def getMatariki(year):
+    def getMatariki(year, center='500', timezone='+12:00', step_size='1h'):
         eighteen_june = datetime(int(year), 6, 18)
 
-        stos = Matariki.getSTOS(year)
+        stos = Matariki.getSTOS(year, center=center,
+                                timezone=timezone, step_size=step_size)
         new_moons = Matariki.getNewMoons(stos)
 
         # Find the first day of the Tangaroa period (23rd day since new moon, first day included)
@@ -79,8 +90,6 @@ class Matariki(object):
                 stos[new_moons[i]][0], '%Y-%b-%d') + timedelta(days=22)
             if tangaroa >= eighteen_june:
                 return Matariki.getClosestFriday(tangaroa).strftime('%Y-%m-%d')
-
-        
 
 
 def main():
@@ -97,7 +106,6 @@ def main():
             print('Year has to be a valid integer.')
 
     print(Matariki.getMatariki(year))
-
 
 
 if __name__ == "__main__":

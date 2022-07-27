@@ -1,5 +1,4 @@
 # **findMatariki by Team NSB**
-
 ### **Preface**
 
 Matariki is the Māori name of the Pleides star cluster. The predawn rising of Matariki in the mid-winter sky marks the changing of the seasons and the beginning of the Maori New Year. Traditionally, this was used to determine the coming season's crop; a warmer season, and therefore a more productive crop yield, was indicated by how bright the stars were. 
@@ -25,6 +24,7 @@ python findMatariki.py
 ```
 The program will prompt you to enter a year as an input. Enter the year and the Matariki date for that year will be returned, in a YYYY-MM-DD format.
 
+[Here](https://www.youtube.com/watch?v=6a-HgocFTS0&feature=youtu.be) is a short video demonstrating how to use the program.
 
 ## **Methodology**
 

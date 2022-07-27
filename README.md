@@ -39,3 +39,7 @@ Furthermore, under our Alternative Solutions, we also added detailed string comm
 
 ## **Alternative Solutions**
 other solutions are not as accurate
+
+## **Contributors**
+@Sttaseen - findMatariki
+@xGhqul - testing, commenting

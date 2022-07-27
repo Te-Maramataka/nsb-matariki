@@ -17,7 +17,7 @@ We believe this script also has real-world practical use for whanau on a nationa
 
 ## **Installation**
 
-To install the required libraries, go to the repository folder. Then run the following in your command prompt:
+To install the required libraries, go to the repository folder. Then run the following in your command prompt/shell/bash:
 ```
 pip install -r requirements.txt
 ```
@@ -36,7 +36,7 @@ The program will prompt you to enter a year as an input. Enter the year and the 
 Since the Matariki dates were [determined](https://www.mbie.govt.nz/assets/matariki-dates-2022-to-2052-matariki-advisory-group.pdf) by using the knowledge that the Matariki becomes visible during the Tangaroa period of a Maori lunar month, we used lunar cycles to find this Tangaroa period.
 
 - Use NASA's Horizon API to get the Sun-to-Phase (STO) phase angles of the moon.
-- Determine the local maximas of these STO values using ```argrelextrema``` from the```SciPy.Signal``` library. These gives us the times for the new moons of different months. 
+- Determine the local maximas of these STO values using ```argrelextrema``` from the```SciPy.Signal``` library. These give us the times for the new moons of different months. 
 - Use the fact that Tangaroa always occurs after the 19th of June and that the Tangaroa period always starts on the 23rd day of a lunar month to find the first day of the Tangaroa period after the 19th of June.
 - Use ```Matariki.closestFriday()``` to determine closest Friday to the start of the Tangaroa period which is also the Matariki day for that year.
 

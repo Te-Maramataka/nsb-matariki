@@ -27,15 +27,15 @@ The program will prompt you to enter a year as an input. Enter the year and the 
 [Here](https://www.youtube.com/watch?v=6a-HgocFTS0&feature=youtu.be) is a short video demonstrating how to use the program.
 
 ## **Methodology**
+Since the Matariki dates were [determined](https://www.mbie.govt.nz/assets/matariki-dates-2022-to-2052-matariki-advisory-group.pdf) by choosing the closest Friday from the Tangaroa period after 19th June since the Tangaroa period always starts on the 23rd day of a lunar month, we used lunar months to determine the start of the Tangaroa period. Using NASA's Horizon API to get find Sun-to-Phase (STO) phase angle we determine the local maximas of the moon's STO values which marks the new moon of a month. Then by using the fact that Tangaroa always occurs after the 19th of June, we then find the first Tangaroa period after the 19th of June and by using ```Matariki.closestFriday()```, we determine closest Friday to the start of the Tangaroa period which is also the Matariki day for that year.
+
+## **Specifications**
 Our script finds the correct Matariki date for the next 50 years (2022-2052), as outlined in [this document](https://www.mbie.govt.nz/assets/matariki-dates-2022-to-2052-matariki-advisory-group.pdf). Not only this, we are also able to predict the Matariki date for a long range of years, both in the future and in the past. Since NASA's JPL Horizons API has moon phase data available from years 1000 to 9999 inclusive, this means our script can predict when Matariki was as far as 1022 years ago, as well as when it will be 7977 years in the future, and anywhere in between. We have displayed the predictions in a YYYY-MM-DD format for convenience.
 
 We have added docstrings to our script (findMatariki.py) so that anyone, with a coding background or not, can follow along. These comments guide the reader systematically from top to bottom, documenting every function, class, and module. Here is an example:
 ![code](https://i.imgur.com/r6ngXUI.jpg)
 
 Every function defined is structured on its own, so that they can be reusable in other programs. We ensured this was the case when we were starting as we knew a possible development on this script could be to use it as a [Chrome extension](https://docs.google.com/presentation/d/19V19oQvpHnYjP2_FcM1_xw8tZIVGi9tB801cl1HUxh0/edit#slide=id.p).
-
-## **Methodology**
-Since the Matariki dates were [determined](https://www.mbie.govt.nz/assets/matariki-dates-2022-to-2052-matariki-advisory-group.pdf) by choosing the closest Friday from the Tangaroa period after 19th June since the Tangaroa period always starts on the 23rd day of a lunar month, we used lunar months to determine the start of the Tangaroa period. Using NASA's Horizon API to get find Sun-to-Phase (STO) phase angle we determine the local maximas of the moon's STO values which marks the new moon of a month. Then by using the fact that Tangaroa always occurs after the 19th of June, we then find the first Tangaroa period after the 19th of June and by using ```Matariki.closestFriday()```, we determine closest Friday to the start of the Tangaroa period which is also the Matariki day for that year.
 
 ## **Contributors**
 [@Sttaseen](https://github.com/sttaseen) - findMatariki

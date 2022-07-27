@@ -49,6 +49,8 @@ We have added docstrings to our script (findMatariki.py) so that anyone, with a 
 
 Every function defined is structured on its own, so that they can be reusable in other programs. We ensured this was the case when we were starting as we knew a possible development on this script could be to use it as a [Chrome extension](https://docs.google.com/presentation/d/19V19oQvpHnYjP2_FcM1_xw8tZIVGi9tB801cl1HUxh0/edit#slide=id.p).
 
+An example of reusability is through our test_matariki.py folder. This simple testing algorithm increased working efficiency and reduced time for debugging. Each member has also written >1/2n code.
+
 ## **Contributors**
 [@Sttaseen](https://github.com/sttaseen)
 

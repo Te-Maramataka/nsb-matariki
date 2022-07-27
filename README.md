@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```
 
 ## **Usage**
-```
+
 In the root directory, run:
 ```
 python findMatariki.py
